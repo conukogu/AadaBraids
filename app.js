@@ -7,11 +7,13 @@ const path = require("path");
 
 const port = process.env.PORT || 3000;
 
+mysql://b33dec1088e7e0:6cf06160@us-cdbr-east-05.cleardb.net/heroku_6b8ae48b51df0de?
+
 const db_config = {
   host: "us-cdbr-east-05.cleardb.net",
-  user: "bc778fd640b8ba",
-  password: "78a7b63d",
-  database: "heroku_f62ce51aa2ee177",
+  user: "b33dec1088e7e0",
+  password: "6cf06160",
+  database: "heroku_6b8ae48b51df0de",
 };
 
 const db = mysql.createPool({connectionLimit: 5, ...db_config});
@@ -19,14 +21,14 @@ const db = mysql.createPool({connectionLimit: 5, ...db_config});
 app.use(express.static(path.join(__dirname, "/build")));
 
 app.get("/api/productList", (req, res) => {
-  const insertQ = "SELECT * FROM heroku_f62ce51aa2ee177.contactform;";
+  const insertQ = "SELECT * FROM heroku_6b8ae48b51df0de.product_info;";
   db.query(insertQ, (err, result) => {
     res.send(result);
   });
 });
 
 app.get("/api/formList", (req, res) => {
-  const insertQ = "SELECT * FROM heroku_f62ce51aa2ee177.contactform;";
+  const insertQ = "SELECT * FROM heroku_6b8ae48b51df0de.form_info;";
   db.query(insertQ, (err, result) => {
     res.send(result);
   });
@@ -47,7 +49,7 @@ app.post("/api/formInsert", (req, res) => {
   const message = req.body.message;
 
   const sqlInsert =
-    "INSERT INTO heroku_f62ce51aa2ee177.contactform(firstName, lastName, email, phoneNumber, message) VALUES (?,?,?,?,?)";
+    "INSERT INTO heroku_6b8ae48b51df0de.form_info(firstName, lastName, email, phoneNumber, message) VALUES (?,?,?,?,?)";
   db.query(
     sqlInsert,
     [firstName, lastName, email, phoneNumber, message],
