@@ -6,7 +6,15 @@ box-sizing: border-box;
 }
 
 body, html{
+ padding-bottom: 30%;
 width: 100%;
-max-height: 100vh;
-overflow: hidden;
+min-height: 100vh;
+}
+
+@media(min-width: 651px){
+body, html{
+ height: 100vh;
+overflow-y: hidden;
+// overflow: scroll;
+}
 }

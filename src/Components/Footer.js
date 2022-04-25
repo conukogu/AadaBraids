@@ -1,6 +1,6 @@
 import { styles } from "dom7";
 import React, {useState} from "react";
-import './styles.css'
+import './main.css'
 
 
 

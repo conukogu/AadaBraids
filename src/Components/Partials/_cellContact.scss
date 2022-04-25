@@ -1,21 +1,30 @@
-.contactForm{
-display: flex;
-padding: 2vw;
-flex-direction: column;
-z-index: 20;
- position: absolute;
- bottom: 17%;
- width: 100%;
-align-items: center;
+form.contactForm {
+    display: flex;
+    padding: 2vw;
+    flex-direction: column;
+    z-index: 20;
+    position: absolute;
+    top: 30%;
+    height: 70vh;
+    width: 70%;
+    align-items: center;
+    // margin-top: -5vh;
 }
 
-.contactForm input, .contactForm textarea, .contactForm label
+// @media(min-width: 500px) {
+//   form.contactForm{
+//         width: 100%;
+//         bottom: 5vh;
+//   }
+// }
+
+form.contactForm input, form.contactForm textarea, .contactForm label
 {
- width: 70%;
+//  width: 70%;
  padding-top: 3%;
 }
 
-.contactForm label
+form.contactForm label
 {
 text-align: left;
 font-size: 0.79rem;
@@ -23,7 +32,7 @@ font-family: Geneva, Verdana, sans-serif;
 font-weight: bold;
 }
 
-.contactForm input
+form.contactForm input
 {
   height: 4.5vh ;  
   border-left: 1em;
@@ -33,9 +42,9 @@ font-weight: bold;
   border-bottom-width: 0.2em;
 }
 
-.contactForm textarea
+form.contactForm textarea
 {
-  height: 17vh;
+  height: 12vh;
   border-left: 1em;
   border-right: 1em;
   border-top: 1em;
@@ -49,7 +58,7 @@ font-weight: bold;
     margin-top: 2%;
 }
 
-.contactForm button
+form.contactForm button
 {
    width: 50%;
   height: 5vh; 

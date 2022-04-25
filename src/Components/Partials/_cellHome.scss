@@ -1,25 +1,23 @@
-.homeSearch{
-display: flex;
-padding: 2vw;
-flex-direction: column;
-z-index: 20;
- position: absolute;
- bottom: 18%;
- width: 100%;
-align-items: center;
+.homeSearch {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    bottom: 5vh;
 }
 
- img.resultPic { 
-
-    top: 23%;
-    left: 10%;
-    right: 10%;
-    width: 80%;
-    height: 45vh;
+ img.resultPic {
+    width: 60vw;
+    max-width: 100vw;
+    height: 70vh;
     position: absolute;
     object-fit: cover;
     border-radius: 1em;
-  }
+    /* margin-top: -60vh; */
+    top: 23%;
+}
 
   input.homeInput, .homeSubmit
   {
@@ -29,16 +27,24 @@ align-items: center;
 
   input.homeInput
   {
-   padding: 2%;
-  width: 60%;
-  border-radius: 1em;
-  }
+    width: 30%;
+    border-radius: 1em;
+    height: 5vh;
+    font-size: 2vh;
+    text-align: center;
+    position: absolute;
+    bottom: 15vh;
+}
+  
 
    input.homeSubmit
   {
    padding: 1%;
   width: 20%;
   border-radius: 1em;
+  font-size: 2vh;
+     position: absolute;
+    bottom: 5vh;
   }
 
   .homeSearch input::placeholder{
@@ -50,36 +56,57 @@ align-items: center;
     padding: 2vw;
     flex-direction: column;
     z-index: 20;
-    position: absolute;
-    bottom: 33%;
+    // position: absolute;
+    // bottom: 7%;
     width: 100%;
     align-items: center;
+    margin-top: 50vh;
   }
 
-  .homeCartbutton
-  {
+ .homeCartbuttonC {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 32%;
-  }
+    position: absolute;
+    top: 25%;
+    font-size: 3rem;
+    /* border-width: 1rem; */
+    padding: 0.5%;
+    border-radius: 1rem;
+}
 
-  .homeCartbutton p
+  // .homeCartbutton p
+  // {
+  //   padding-left: 5%;
+  //   padding-right: 1%;
+  //  margin-right: 6%;
+  //   font-size: 2.3vh;
+  // }
+
+ .homeCartbutton select
   {
-    padding-left: 5%;
-    padding-right: 1%;
+  margin-right: 6%;
+    font-size: 3vh;
   }
 
-   div.galleryInvite{
+  div.galleryInvite {
     display: flex;
     padding: 2vw;
     flex-direction: column;
     z-index: 20;
     position: absolute;
-    top: 10%;
-    width: 100%;
+    bottom: 30%;
+    left: 70%;
+    background-color: pink;
+    border-radius: 150em;
+    width: 20%;
+    text-align: center;
+    justify-content: center;
     align-items: center;
-  }
+    /* margin-top: -10vh; */
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+}
 
    .galleryInvite button, .galleryInvite p
    {
@@ -88,12 +115,12 @@ align-items: center;
 
    .galleryInvite button
    {
-        border-radius: 0.5em;font-size: 0.87em;
+        border-radius: 0.5em;font-size: 2vh;
    }
 
    .galleryInvite p
    {
-      font-size: 1.5em;
+      font-size: 4vh;
    }
 
    .siteName
@@ -102,35 +129,43 @@ align-items: center;
     padding: 2vw;
     flex-direction: column;
     z-index: 20;
+    // position: absolute;
+    // top: 20%;
     position: absolute;
-    top: 20%;
+    top: 35vh;
     width: 100%;
-    font-size: 3em;
+    font-size: 7.5vh;
+    // margin-top: 17vh;
     text-align: center;
     align-items: center;
    }
 
    .linkAndOr{
-    display: flex;
+       display: flex;
     padding: 2vw;
     flex-direction: column;
     z-index: 20;
     position: absolute;
-    bottom: 30%;
-    font-size: 1.5em;
+    bottom: 25vh;
+    font-size: 3.2vh;
     width: 100%;
     text-align: center;
     align-items: center;   
    }
 
-   .galleryLink p {
-       font-size: 1.2em;
-       padding: 3%;
-       border-radius: 1em;
-   }
+  //  .galleryLink p {
+  //      font-size: 1.2em;
+  //      padding: 3%;
+  //      border-radius: 1em;
+  //  }
 
     .galleryLink {
        border-radius: 1em;
+       height: 7vh;
+    width: auto;
+    font-size: 2vh;
+    padding-right: 1rem;
+    padding-left: 1rem;
    }
 
    .OR{

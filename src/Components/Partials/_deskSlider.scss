@@ -1,45 +1,73 @@
-@media(max-width: 650px){
 
- 
-#thumbs
+#thumbsB
 {
 position: relative;
 z-index: 11;
-overflow: visible;
-margin-top: 30vh;
-margin-bottom: -75vh;
+// overflow: visible;
+width: 50%;
+margin-top: 5vh;
+    margin-bottom: -15vh;
+     
 }
 
-#main
+.thumbsB
+{
+ opacity: 1;
+}
+
+.thumbsB .swiper-slide.swiper-slide-active 
+{
+   opacity: 1;
+}
+
+
+#mainB
 {
 position: absolute;
 z-index: -1;
+top: 25%;
 }
 
 
-.swiper-slide .hope2 { 
+.swiper-slide .hope2B { 
     // transform: translateY(-200%);
-    width: 70%;
-    height: 20vh;
+   
+    width: 60%;
+    height: 15vh;
     z-Index: 19;
-    overflow: hidden;
+    overflow:scroll;
     color: aliceblue;
-    z-index: -10;
+    z-index: 90;
+    margin: 5%;
+    border-radius: 1em;
+  position: absolute;
+  bottom: 20%;
+
+      padding: 2%;
     // position: relative;
     display: block;
     margin: auto;  
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.534);
   }
 
-  div.hope2 .homeCartbutton{
-    transform: translateX(50%);
+  div.hope2B .homeCartbuttonB{
+    // transform: translateX(50%);
     width: 50%;
     height: 5.5vh;
     padding-top: 3%;
     padding-bottom: 3%;
+   
     border-radius: 0.8em;
   }
 
-  div.hope2 .homeCartbutton select{
+  div.hope2B div{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  div.hope2B .homeCartbuttonB select{
     padding: 3%;
   margin: 5%;
   border-radius: 0.3em;
@@ -55,27 +83,34 @@ z-index: -1;
    } */
 
    
-  
+
   /* .swiper-slide img {
     display: block;
     width: 100%;
     height: 100vh;
   } */
 
-  .swiper-slide img.hope { 
+  .swiper-slide img.hopeB { 
     display: block;
-    width: 100%;
-    height: 100vh;
+    top: 10%;
+    width: 95%;
+    height: 50vh;
     object-fit: cover;
-    /* z-Index: 2; */
-    // position: absolute;
+    position: absolute;
+    border-radius: 1em;
   }
+
+   .swiper-slide.swiper-slide-active img.hopeB{
+        width: 200%;
+    height: 65vh;
+    top: auto;
+   }
 
   .swiper
   {
     display: block;
     width: 100%;
-    height: 100vh;
+    // height: 90vh;
         // margin-top: -25vh;
     // z-Index: -10; 
     position: absolute;
@@ -88,19 +123,38 @@ z-index: -1;
     list-style: none;
     /* width: 100%; */
     /* left: 30%; */}
+
+
+ .swiper-slide{
+     
+   opacity: 0.5;
+
+  }
+   .swiper-slide.swiper-slide-active{
+      opacity: 1;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+  }
     
 
     div.swiper-button-next::after, div.swiper-button-prev::after  
     {
     font-weight:900;
     -webkit-text-stroke-width: 0.1em;
-    transform: translateY(300%);
+    // margin-top: 90vh;
+
+        position: absolute;
+    top: 90vh;
+    // width: 100%;
+    /* bottom: 20vh; */
+    font-size: 10vh;
 
     }
     div.swiper-button-next, div.swiper-button-prev 
     {
     position: absolute;
-    top: -5%;
+    top: -10%;
    }
   
   
@@ -109,4 +163,3 @@ z-index: -1;
    transform: translateY(-575%);
 }
 
-}

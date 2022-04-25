@@ -26,7 +26,7 @@ function Navbar({menuOpen, setMenuOpen}) {
           <p className="close">
             <i className="fa fa-bars fa-3x hamburger"></i>
 
-             <Link className="nl" to= '/'>
+             <Link className="nl nl-logo" to= '/'>
               <img className="logo" src={img}></img>
             </Link>
 

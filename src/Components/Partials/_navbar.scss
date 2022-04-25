@@ -1,4 +1,3 @@
-
 //   nav{
 // //    z-index: 1000
 //   }
@@ -6,7 +5,7 @@
 //     color: white;
 //     text-decoration: none;
 //     font-size: 1.67vw;
-//     font-family:'Open sans'; 
+//     font-family:'Open sans';
 //     padding: 1vw;
 //   }
 //   .nav-links a:hover{
@@ -14,133 +13,127 @@
 //     background-color: white;
 //     height:2vh;
 //     color: black;
-  
-//   }
-// //   
 
-.close
-{
+//   }
+// //
+
+.close {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  min-width: 100%;
   position: absolute;
-  top:0%;
+  top: 0%;
   left: 0%;
-//   color: transparent;
+  //   color: transparent;
   height: 10%;
-  padding:0;
+  padding: 0;
   margin: 0%;
   transition: background-color 0.3s ease;
-   z-index: 15;
-//   z-index: -10;
+  z-index: 15;
+  //   z-index: -10;
+  display: flex;
+  justify-content: center;
 }
 
-.hamburger{
-position: absolute;
-//   top:15%;
-left: 0%;
- padding-left: 3%;
- transform: translate(0%, 20%);
+.hamburger {
+  // position: absolute;
+  //   top:15%;
+  left: 0%;
+  padding-left: 3%;
+  //  transform: translate(0%, 20%);
 }
 
-.shop{
-position: absolute;
-//   top:15%;
-right: 0%;
- padding-right: 0%;
- margin-right: 0%;
- transform: translate(-25%, 20%);
+.shop { 
+     font-size: 7vh;
+    position: absolute;
+    right: 0%;
+    padding-right: 1%;
+    margin-right: 2%;
+    transform: translate(0%, 20%);
 }
 
-
-img.logo
-{
-position: absolute;
-height:auto;
-width:23vw;
-transform: translate(160%, -13%);
+img.logo {
+  // position: absolute;
+  padding: 0%;
+  margin: 0%;
+  height: 10vh;
+  width: auto;
+  // right: -50%;
+  // transform: translate(160%, -13%);
 }
 
-@media (min-width: 500px){
+// @media (min-width: 500px){
 
-  img.logo{
-     width:9vw;
-     transform: translate(500%, -13%);
-//   text-align: center;
-}
-}
+//   img.logo{
+//      width:9vw;
+//    //   transform: translate(500%, -13%);
+// //   text-align: center;
+// }
+// }
 
-
-
- .nav-links
- {
-//    transform-origin: 0% 0%;
-   transform: translate(0%, -100%);
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-//    padding-left: 3%;
-   padding-top: 3%;
-   padding-bottom: 3%;
-   margin-bottom: 4%;
+.nav-links {
+  transform: translate(0%, -100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  /* margin-bottom: 4%; */
   text-align: right;
-   background: rgba(155, 5, 5, 0.363);
-    position: absolute; 
-    width:100%;
-     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 13;
- }
-
- .nl
- {
-    font-family: sans-serif;
-    padding: 0.5%;
-    padding-right: 5%;
-    width: 30%;
- }
-#menuToggle{
-    //  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-
+  background: rgba(155, 5, 5, 0.363);
+  /* position: absolute; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  z-index: 17;
+  /* left: 0%; */
 }
- /*And let's slide it in from the left*/
-  
- #menuToggle input:checked ~ .nav-links
- {
-   transform: none;
- }
 
- #menuToggle input
- { 
-  position: absolute;
-  top: 2.5%;
-   padding: 0;
-   margin: 0;
-  width: 11%;
-  height:5%;
-  left: 3%;
-  opacity: 0;
+.nl {
+  font-family: sans-serif;
+  //  padding: 0.5%;
+  //  padding-right: 5%;
+  //  width: 30%;
+  padding-right: 2vw;
+  font-size: 3vh;
   z-index: 20;
- }
+}
+#menuToggle {
+  //  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin-bottom: 3vh;
+  //  height: 10vh;
+}
+/*And let's slide it in from the left*/
 
-  
+#menuToggle input:checked ~ .nav-links {
+  transform: none;
+}
 
- #menuToggle input:checked ~ p.close
- {
-    background-color: transparent;
-    z-index: 5;
- }
+#menuToggle input {
+   position: absolute;
+    top: 2.5%;
+    padding: 0;
+    margin: 0;
+    width: 11%;
+    height: 5%;
+    left: 3%;
+    left: -0.5%;
+    opacity: 0;
+    z-index: 55;
+}
 
- #menuToggle input:checked ~ .close .hamburger
- {
-    color: blue;
- }
+#menuToggle input:checked ~ p.close {
+  background-color: transparent;
+  z-index: 5;
+}
 
- #menuToggle input:checked ~ .close .logo
- {
-    opacity: 0%;
- }
+#menuToggle input:checked ~ .close .hamburger {
+  color: blue;
+}
 
-  #menuToggle input:checked ~ .close .shop
- {
-    opacity: 0%;
- }
+#menuToggle input:checked ~ .close .logo {
+  opacity: 0%;
+}
+
+#menuToggle input:checked ~ .close .shop {
+  opacity: 0%;
+}
