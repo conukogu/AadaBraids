@@ -41,33 +41,23 @@ function App() {
 // export default App;
  
   return (
-    <div className="router1">
+    // <div className="router1">
       
         <Router>
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     <div className="router2">
           <Routes>
-            <Route
-              path="/"
-              element={<Filter menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
-            />
+            <Route path="/" element={<Filter menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}/>
             <Route path="/shop" element={<Product_Slider2/>} />
-            <Route path="/shop" element={<Products />} />
+            {/* <Route path="/shop" element={<Products />} /> */}
             <Route path="/contact" element={<Form />} />
           </Routes>
       </div>
           <Footer />
         </Router>
 
-        {/* <Products /> */}
-        {/* <Blurb/> */}
-        {/* <Filter menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
-
-        {/* <PriceSearch/> */}
-
-        {/* <Form/> */}
       
-    </div>
+    // </div>
   );
 }
 
