@@ -97,12 +97,12 @@ app.get("/api/getList", (req, res) => {
   });
 });
 
-// app.get("/api/formList", (req, res) => {
-//   const insertQ = "SELECT * FROM heroku_6b8ae48b51df0de.form_info;";
-//   db.query(insertQ, (err, result) => {
-//     res.send(result);
-//   });
-// });
+app.get("/api/formList", (req, res) => {
+  const insertQ = "SELECT * FROM heroku_6b8ae48b51df0de.form_info;";
+  db.query(insertQ, (err, result) => {
+    res.send(result);
+  });
+});
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/build/index.html"));
