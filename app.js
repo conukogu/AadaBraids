@@ -41,23 +41,23 @@ app.get("*", (req, res) => {
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.post("/api/formInsert", (req, res) => {
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const email = req.body.email;
-  const phoneNumber = req.body.phoneNumber;
-  const message = req.body.message;
+// app.post("/api/formInsert", (req, res) => {
+//   const firstName = req.body.firstName;
+//   const lastName = req.body.lastName;
+//   const email = req.body.email;
+//   const phoneNumber = req.body.phoneNumber;
+//   const message = req.body.message;
 
-  const sqlInsert =
-    "INSERT INTO heroku_6b8ae48b51df0de.form_info(firstName, lastName, email, phoneNumber, message) VALUES (?,?,?,?,?)";
-  db.query(
-    sqlInsert,
-    [firstName, lastName, email, phoneNumber, message],
-    (err, result) => {
-      console.log(result);
-    }
-  );
-});
+//   const sqlInsert =
+//     "INSERT INTO heroku_6b8ae48b51df0de.form_info(firstName, lastName, email, phoneNumber, message) VALUES (?,?,?,?,?)";
+//   db.query(
+//     sqlInsert,
+//     [firstName, lastName, email, phoneNumber, message],
+//     (err, result) => {
+//       console.log(result);
+//     }
+//   );
+// });
 
 app.listen(port, (err) => {
   if (err) return console.log(err);
