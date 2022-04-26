@@ -20,10 +20,12 @@ function Filter({menuOpen}) {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/product/get").then((response) => {
-      // console.log(response.data[response.data.length-2]);
-      setProductList(response.data);
-    });
+    Axios.get("https://aadabraids.herokuapp.com/api/getList").then(
+      (response) => {
+        // console.log(response.data[response.data.length-2]);
+        setProductList(response.data);
+      }
+    );
   }, []);
 
   // var collect = 1;
@@ -50,8 +52,8 @@ const handleSubmit = (e) => {
     item.ProductName === search)
 
   arr2.map((item) => 
-          (setPicID(item.id),
-           console.log(item.id) ))
+          (setPicID(item.row),
+           console.log(item.row) ))
 
    console.log(`This is the picID: ${picID}`); 
    

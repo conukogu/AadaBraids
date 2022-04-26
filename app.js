@@ -91,7 +91,7 @@ const db = mysql.createPool({connectionLimit: 5, ...db_config});
 app.use(express.static(path.join(__dirname, "/build")));
 
 app.get("/api/getList", (req, res) => {
-  const insertQ = "SELECT * FROM heroku_6b8ae48b51df0de.product_info;";
+  const insertQ = "CALL GetAllProducts();";
   db.query(insertQ, (err, result) => {
     res.send(result);
   });
