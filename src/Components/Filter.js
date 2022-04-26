@@ -23,7 +23,7 @@ function Filter({menuOpen}) {
     Axios.get("https://aadabraids.herokuapp.com/api/getList").then(
       (response) => {
         // console.log(response.data[response.data.length-2]);
-        setProductList(response.data);
+        setProductList(response.data[0]);
       }
     );
   }, []);
