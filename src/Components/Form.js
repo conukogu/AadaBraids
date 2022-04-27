@@ -13,10 +13,12 @@ function Form() {
   const [confirmation, setConfirmation] = useState(false);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/form/get").then((response) => {
-      // console.log(response.data[response.data.length-2]);
-      setFormList(response.data);
-    });
+    Axios.get("https://aadabraids.herokuapp.com/api/formList").then(
+      (response) => {
+        // console.log(response.data[response.data.length-2]);
+        setFormList(response.data);
+      }
+    );
   }, [formList]);
 
   const [phoneSize, setPhoneSize] = useState(660 > window.innerHeight);
@@ -36,7 +38,7 @@ function Form() {
 
   const submitFullForm = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3001/form/insert", {
+    Axios.post("https://aadabraids.herokuapp.com/api/formInsert", {
       firstName: firstName,
       lastName: lastName,
       email: email,
