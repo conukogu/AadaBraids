@@ -106,12 +106,12 @@ function Form() {
         </form>
       ) : (
         <div className="check">
-          <h1>Here is you sent info!</h1>
-          <div>{formList[formList.length - 1].FirstName}</div>
-          <div>{formList[formList.length - 1].LastName}</div>
-          <div>{formList[formList.length - 1].Email}</div>
-          <div>{formList[formList.length - 1].PhoneNumber}</div>
-          <div>{formList[formList.length - 1].Message}</div>
+          <h1>Here is your sent info!</h1>
+          <div>{formList[formList.length - 1].firstName}</div>
+          <div>{formList[formList.length - 1].lastName}</div>
+          <div>{formList[formList.length - 1].email}</div>
+          <div>{formList[formList.length - 1].phoneNumber}</div>
+          <div>{formList[formList.length - 1].message}</div>
 
           <button type="submit" onClick={FormOk}>
             OK
