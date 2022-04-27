@@ -37,7 +37,7 @@ function Form() {
   }, []);
 
   const submitFullForm = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     Axios.post("https://aadabraids.herokuapp.com/api/formInsert", {
       firstName: firstName,
       lastName: lastName,
@@ -47,6 +47,7 @@ function Form() {
     }).then(() => {
       alert("Sucsessful Insert!");
     });
+     setConfirmation(false);
     setConfirmation(true);
   };
 
