@@ -19,7 +19,7 @@ function Form() {
         setFormList(response.data);
       }
     );
-  }, []);
+  }, [confirmation]);
 
   const [phoneSize, setPhoneSize] = useState(660 > window.innerHeight);
 
